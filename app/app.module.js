@@ -10,5 +10,5 @@ eInsureApp.controller('insureController', function insureController($scope){
 
 
 eInsureApp.constant('config', {
-    url:'http://10.117.189.53:9090'
+    url:'http://10.117.189.86:9080/'
 });

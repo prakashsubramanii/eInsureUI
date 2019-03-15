@@ -1,12 +1,40 @@
-<div class="modal-header">
+<!-- <div class="modal-body">
+  <div class="search_fld">Name <input ng-model="modalName"></div>
+  <div class="search_fld">Place <input ng-model="modalPlace"></div>
+  <div class="search_fld">Pet Age <input ng-model="modalAge"></div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="ok()">Search</button>
+  <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div> -->
+
+
+<div class="container" ng-controller="policyListController">
+  <div class="modal-header">
     <h3>Policy Details</h3>
   </div>
-  <div class="modal-body">
-    <div class="search_fld">Name <input ng-model="modalName"></div>
-    <div class="search_fld">Place <input ng-model="modalPlace"></div>
-    <div class="search_fld">Pet Age <input ng-model="modalAge"></div>
+      <div class="row">
+          <div id="demoContainer"> <!-- class="col-xs-12" -->
+            <form id="registrationForm" class="form-horizontal fv-form fv-form-bootstrap" novalidate="novalidate">
+                <div class="form-group">
+                    <h3>{{policyDetails.id}}</h3>
+                </div>
+              <div class="form-group">
+                <div class="col-xs-6 col-xs-offset-3">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="agree" value="agree" /> Agree with the terms and conditions
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-9 col-xs-offset-3">
+                  <button type="submit" class="btn btn-primary" name="submit" value="Submit" ng-click="ok()">Submit</button>
+                  <button class="btn btn-primary" ng-click="cancel()">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
 </div>
-  <div class="modal-footer">
-      <button class="btn btn-primary" ng-click="ok()">Search</button>
-      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-  </div>
