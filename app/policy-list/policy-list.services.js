@@ -6,11 +6,13 @@ angular.module('policyList').factory('policyListService', ['$http', '$window', '
     var service = {};
     
     service.viewDetails = function (policyid) {
-      return $http({
-        method: 'GET',
-        type: 'JSON',
-        url: 'policies/'+policyid+'.json'
-      });
+      // return $http({
+      //   method: 'GET',
+      //   type: 'JSON',
+      //   url: 'policies/'+policyid+'.json'
+      // });
+
+      return 1;
     }
 
     
@@ -28,6 +30,6 @@ angular.module('policyList').factory('policyListService', ['$http', '$window', '
     //   });
 
     // }
-    
+
     return service;
   }]);

@@ -19,10 +19,10 @@ policyList.controller('policyListController', ['$http','$scope', '$rootScope', '
         $scope.open = function(policyObj) {
             $scope.policy = policyObj;
 
-            policyListService.viewDetails(policyObj.id).then(function (success) {
-                console.log(JSON.stringify(success.data));
+            // policyListService.viewDetails(policyObj.id).then(function (success) {
+                // console.log(JSON.stringify(success.data));
 
-                var policyDetails = success.data;
+                // var policyDetails = success.data;
 
                 var modalInstance =  $uibModal.open({
                     templateUrl: "policy-list/modalContent.html",
@@ -35,10 +35,10 @@ policyList.controller('policyListController', ['$http','$scope', '$rootScope', '
                       $scope.result = `${response} button hitted`;
                   });
       
-            },
-            function (error) {
-                alert('Error in details page');
-            });            
+            // },
+            // function (error) {
+            //     alert('Error in details page');
+            // });            
           };
     }]);
 
@@ -49,7 +49,7 @@ policyList.controller('policyListController', ['$http','$scope', '$rootScope', '
 
               $uibModalInstance.close("Ok");
 
-              alert('PRESSED OK');
+              alert('User Registered for the policy');
               
             //   petListService.searchPetList(object)
             //   .then(
