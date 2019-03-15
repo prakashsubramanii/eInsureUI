@@ -9,8 +9,8 @@ angular.
 
       $routeProvider.
         when('/policies', {
-          controller: 'insureController',
-          template: '<menu-list></menu-list>'
+          controller: 'policyListController',
+          templateUrl: 'policy-list/policy-list.template.html'
         }).
         when('/analytics', {
           controller: 'insureController',

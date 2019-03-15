@@ -1,0 +1,103 @@
+<menu-list></menu-list>
+
+<body>
+    <div ng-controller="policyListController">
+        <div class="container-fluid">
+            <!--Sidebar content-->
+            <!-- <div ng-controller="ModalCtrl"> -->
+                <!-- <button class="btn btn-info" ng-click="open()" style="margin: 15px;">Advanced Search</button> -->
+                
+                <!-- <h2 style="color: red;">{{result}}</h2> -->
+              <!-- </div> -->
+            <!-- <p> Advanced Search </p>
+            <div class="search_fld">Name <input ng-model="$ctrl.petName"></div>
+            <div class="search_fld">Place <input ng-model="$ctrl.petPlace"></div>
+            <div class="search_fld">Pet Age <input ng-model="$ctrl.petAge"></div>
+            <p> -->
+                <!-- <p>
+                    Sort by:
+                    <select ng-model="$ctrl.orderProp">
+                        <option value="petName">Alphabetical</option>
+                        <option value="petAge">Age</option>
+                    </select>
+                </p> -->
+                <h3>
+                    <font color="007bff">List of Policies</font>
+                </h3>
+                <div class="container">
+                    <table id="policyListTable" class="table">
+                        <!--Body content-->
+                        <!-- <ul> -->
+                            <thead>
+                                <tr ng-show="policies">
+                                    <th>LIC Policies</th>
+                                    <th>Entry Age</th>
+                                    <th>Maximum Maturity Age</th>
+                                    <th>Policy Term</th>
+                                    <th>Minimum Premium</th>
+                                    <th>Minimum Sum Assured</th>
+                                    <th>Plan</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr dir-paginate="policy in policies | itemsPerPage: 6">
+                                    <td>{{policy.id}}</td>
+                                    <td>{{policy.entryage}}</td>
+                                    <td>{{policy.maturityage}}</td>
+                                    <td>{{policy.policyterm}}</td>
+                                    <td>{{policy.minpremium}}</td>
+                                    <td>{{policy.minsa}}</td>
+                                    <td>{{policy.plan}}</td>
+                                    <td>
+                                        <button ng-click="viewDetails(policy.id)" class="btn btn-primary btn-sm">View Details</button>
+                                    </td>
+                                    <!-- <td>{{policy.user === null ? 'NA' : pet.user.username}}</td>
+                                    <td>
+                                        <button ng-click="buyPets(pet)" class="btn btn-primary btn-sm"
+                                            ng-disabled="pet.user !== null">{{pet.user === null ? 'Buy': 'Sold Out'}}</button>
+                                    </td> -->
+                                </tr>
+                            </tbody>
+                        <!-- </ul> -->
+                    </table>
+                    <dir-pagination-controls
+                    max-size="3"
+                    direction-links="true"
+                    boundary-links="true" >
+                </dir-pagination-controls>
+                    <!-- <div data-pagination="" data-num-pages="$ctrl.numOfPages()" 
+                    data-current-page="$ctrl.curPage" data-max-size="$ctrl.maxSize"  
+                    data-boundary-links="true"></div> -->
+                    <!--  			totalItems: totalItems,
+			currentPage: currentPage,
+			pageSize: pageSize,
+			totalPages: totalPages,
+			startPage: startPage,
+			endPage: endPage,
+			startIndex: startIndex,
+			endIndex: endIndex,
+			pages: pages-->
+                    <!-- <ul ng-if="$ctrl.filteredPets.length" class="pagination">
+                        <li ng-class="{disabled:$ctrl.pager.currentPage === 1}">
+                            <a ng-click="$ctrl.setPage(1)">First</a>
+                        </li>
+                        <li ng-class="{disabled:$ctrl.pager.currentPage === 1}">
+                            <a ng-click="$ctrl.setPage($ctrl.pager.currentPage - 1)">Previous</a>
+                        </li>
+                        <li ng-repeat="page in $ctrl.pager.pages" ng-class="{active:$ctrl.pager.currentPage === page}">
+                            <a ng-click="$ctrl.setPage(page)">{{page}}</a>
+                        </li>                
+                        <li ng-class="{disabled:$ctrl.pager.currentPage === $ctrl.pager.totalPages}">
+                            <a ng-click="$ctrl.setPage($ctrl.pager.currentPage + 1)">Next</a>
+                        </li>
+                        <li ng-class="{disabled:$ctrl.pager.currentPage === $ctrl.pager.totalPages}">
+                            <a ng-click="$ctrl.setPage($ctrl.pager.totalPages)">Last</a>
+                        </li>
+                    </ul>
+             -->
+                </div>
+        </div>
+
+    </div>
+</body>
